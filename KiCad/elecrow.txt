@@ -1,0 +1,58 @@
+[[Design Rules]]
+[Net Class Editor]
+Clearance: 0.2 (mm)
+Track Width: 0.25 (mm)
+Via Dia: 0.6 (mm)
+Via Drill: 0.3 (mm)
+uVia Dia: 0.3 (mm)
+uVia Drill: 0.1 (mm)
+[Global Design Rules]
+Via Options:
+- Do not allow blind/bruied vias
+- Do not allow micro vias
+Minimum Allowed Values
+- Min track width (mm): 0.2
+- Min via diameter (mm): 0.4
+- Min via drill dia (mm):0.3
+- Min uvia diameter (mm): 0.2
+- Min uvia drill dia (mm): 0.1
+Custom Track Widths:
+0.5 (mm)
+0.8 (mm)
+1.0 (mm)
+
+
+[[plots]]
+Plot format:
+- Gerber
+Layers:
+- F.Cu
+- B.Cu
+- B.Paste (for stencil)
+- F.Paste (for stencil)
+- B.SilkS
+- F.SilkS
+- B.Mask
+- F.Mask
+- Edge.Cuts
+Options:
+- Plot footprint values
+- Plot footprint refrences
+- Exclude PCB edge layer from other layers
+- Default line width (mm): 0.1
+Gerber options:
+- Use Protel filename extensions
+Format:
+- 4.6 (mm)
+
+[drill file]
+Drill Units:
+- Millimeters
+Zeroes Format:
+- Decimal format
+Drill Map File Format:
+- Gerber
+Drill file options:
+- none
+Drill Origin:
+- Absolute

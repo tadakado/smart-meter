@@ -1,0 +1,663 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ADE7816
+LIBS:SmartMeter-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "Smart meter - level converter"
+Date "2016-08-28"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "Licensed under a Creative Commons Attribution 4.0"
+Comment3 "CC BY 4.0 Tadashi Kadowaki"
+Comment4 "Smart meter"
+$EndDescr
+$Comp
+L BSS138 Q1
+U 1 1 56C9EFAC
+P 2550 1850
+F 0 "Q1" H 2750 1925 50  0000 L CNN
+F 1 "BSS138" H 2750 1850 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2750 1775 50  0000 L CIN
+F 3 "" H 2550 1850 50  0000 L CNN
+	1    2550 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R21
+U 1 1 56C9F09B
+P 2250 1700
+F 0 "R21" V 2330 1700 50  0000 C CNN
+F 1 "10K" V 2250 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 1700 50  0001 C CNN
+F 3 "" H 2250 1700 50  0000 C CNN
+	1    2250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R22
+U 1 1 56C9F0CE
+P 2850 1700
+F 0 "R22" V 2930 1700 50  0000 C CNN
+F 1 "10K" V 2850 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2780 1700 50  0001 C CNN
+F 3 "" H 2850 1700 50  0000 C CNN
+	1    2850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1450 2500 1650
+Wire Wire Line
+	1850 1450 2500 1450
+Wire Wire Line
+	2250 1450 2250 1550
+Wire Wire Line
+	2850 1850 2850 2350
+Wire Wire Line
+	2750 1950 3250 1950
+Wire Wire Line
+	1850 1950 2350 1950
+Wire Wire Line
+	2250 1850 2250 2050
+Connection ~ 2250 1950
+Connection ~ 2850 1950
+Connection ~ 2250 1450
+Text HLabel 3250 1450 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	2850 1550 2850 1450
+Wire Wire Line
+	2850 1450 3250 1450
+Text HLabel 1850 1450 0    60   Input ~ 0
+LVCC
+Text HLabel 1850 1950 0    60   BiDi ~ 0
+L1
+Text HLabel 3250 1950 2    60   BiDi ~ 0
+H1
+$Comp
+L BSS138 Q2
+U 1 1 56CA0884
+P 2550 3050
+F 0 "Q2" H 2750 3125 50  0000 L CNN
+F 1 "BSS138" H 2750 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2750 2975 50  0000 L CIN
+F 3 "" H 2550 3050 50  0000 L CNN
+	1    2550 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R23
+U 1 1 56CA088A
+P 2250 2900
+F 0 "R23" V 2330 2900 50  0000 C CNN
+F 1 "10K" V 2250 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 2900 50  0001 C CNN
+F 3 "" H 2250 2900 50  0000 C CNN
+	1    2250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R24
+U 1 1 56CA0890
+P 2850 2900
+F 0 "R24" V 2930 2900 50  0000 C CNN
+F 1 "10K" V 2850 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2780 2900 50  0001 C CNN
+F 3 "" H 2850 2900 50  0000 C CNN
+	1    2850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2650 2500 2850
+Wire Wire Line
+	1850 2650 2500 2650
+Wire Wire Line
+	2250 2650 2250 2750
+Wire Wire Line
+	2850 3050 2850 3550
+Wire Wire Line
+	2750 3150 3250 3150
+Wire Wire Line
+	1850 3150 2350 3150
+Wire Wire Line
+	2250 3050 2250 3250
+Connection ~ 2250 3150
+Connection ~ 2850 3150
+Connection ~ 2250 2650
+Text HLabel 3250 2650 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	2850 2750 2850 2650
+Wire Wire Line
+	2850 2650 3250 2650
+Text HLabel 1850 2650 0    60   Input ~ 0
+LVCC
+Text HLabel 1850 3150 0    60   BiDi ~ 0
+L2
+Text HLabel 3250 3150 2    60   BiDi ~ 0
+H2
+$Comp
+L BSS138 Q3
+U 1 1 56CA0900
+P 2550 4250
+F 0 "Q3" H 2750 4325 50  0000 L CNN
+F 1 "BSS138" H 2750 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2750 4175 50  0000 L CIN
+F 3 "" H 2550 4250 50  0000 L CNN
+	1    2550 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R25
+U 1 1 56CA0906
+P 2250 4100
+F 0 "R25" V 2330 4100 50  0000 C CNN
+F 1 "10K" V 2250 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 4100 50  0001 C CNN
+F 3 "" H 2250 4100 50  0000 C CNN
+	1    2250 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R26
+U 1 1 56CA090C
+P 2850 4100
+F 0 "R26" V 2930 4100 50  0000 C CNN
+F 1 "10K" V 2850 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2780 4100 50  0001 C CNN
+F 3 "" H 2850 4100 50  0000 C CNN
+	1    2850 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3850 2500 4050
+Wire Wire Line
+	1850 3850 2500 3850
+Wire Wire Line
+	2250 3850 2250 3950
+Wire Wire Line
+	2850 4250 2850 4750
+Wire Wire Line
+	2750 4350 3250 4350
+Wire Wire Line
+	1850 4350 2350 4350
+Wire Wire Line
+	2250 4250 2250 4450
+Connection ~ 2250 4350
+Connection ~ 2850 4350
+Connection ~ 2250 3850
+Text HLabel 3250 3850 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	2850 3950 2850 3850
+Wire Wire Line
+	2850 3850 3250 3850
+Text HLabel 1850 3850 0    60   Input ~ 0
+LVCC
+Text HLabel 1850 4350 0    60   BiDi ~ 0
+L3
+Text HLabel 3250 4350 2    60   BiDi ~ 0
+H3
+$Comp
+L BSS138 Q4
+U 1 1 56CA0961
+P 2550 5450
+F 0 "Q4" H 2750 5525 50  0000 L CNN
+F 1 "BSS138" H 2750 5450 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2750 5375 50  0000 L CIN
+F 3 "" H 2550 5450 50  0000 L CNN
+	1    2550 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L R R27
+U 1 1 56CA0967
+P 2250 5300
+F 0 "R27" V 2330 5300 50  0000 C CNN
+F 1 "10K" V 2250 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 5300 50  0001 C CNN
+F 3 "" H 2250 5300 50  0000 C CNN
+	1    2250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R28
+U 1 1 56CA096D
+P 2850 5300
+F 0 "R28" V 2930 5300 50  0000 C CNN
+F 1 "10K" V 2850 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2780 5300 50  0001 C CNN
+F 3 "" H 2850 5300 50  0000 C CNN
+	1    2850 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5050 2500 5250
+Wire Wire Line
+	1850 5050 2500 5050
+Wire Wire Line
+	2250 5050 2250 5150
+Wire Wire Line
+	2850 5450 2850 5950
+Wire Wire Line
+	2750 5550 3250 5550
+Wire Wire Line
+	1850 5550 2350 5550
+Wire Wire Line
+	2250 5450 2250 5650
+Connection ~ 2250 5550
+Connection ~ 2850 5550
+Connection ~ 2250 5050
+Text HLabel 3250 5050 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	2850 5150 2850 5050
+Wire Wire Line
+	2850 5050 3250 5050
+Text HLabel 1850 5050 0    60   Input ~ 0
+LVCC
+Text HLabel 1850 5550 0    60   BiDi ~ 0
+L4
+Text HLabel 3250 5550 2    60   BiDi ~ 0
+H4
+$Comp
+L BSS138 Q5
+U 1 1 56CA09DA
+P 5450 1850
+F 0 "Q5" H 5650 1925 50  0000 L CNN
+F 1 "BSS138" H 5650 1850 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5650 1775 50  0000 L CIN
+F 3 "" H 5450 1850 50  0000 L CNN
+	1    5450 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R29
+U 1 1 56CA09E0
+P 5150 1700
+F 0 "R29" V 5230 1700 50  0000 C CNN
+F 1 "10K" V 5150 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 1700 50  0001 C CNN
+F 3 "" H 5150 1700 50  0000 C CNN
+	1    5150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R30
+U 1 1 56CA09E6
+P 5750 1700
+F 0 "R30" V 5830 1700 50  0000 C CNN
+F 1 "10K" V 5750 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5680 1700 50  0001 C CNN
+F 3 "" H 5750 1700 50  0000 C CNN
+	1    5750 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1450 5400 1650
+Wire Wire Line
+	4750 1450 5400 1450
+Wire Wire Line
+	5150 1450 5150 1550
+Wire Wire Line
+	5750 1850 5750 2350
+Wire Wire Line
+	5650 1950 6150 1950
+Wire Wire Line
+	4750 1950 5250 1950
+Wire Wire Line
+	5150 1850 5150 2050
+Connection ~ 5150 1950
+Connection ~ 5750 1950
+Connection ~ 5150 1450
+Text HLabel 6150 1450 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	5750 1550 5750 1450
+Wire Wire Line
+	5750 1450 6150 1450
+Text HLabel 4750 1450 0    60   Input ~ 0
+LVCC
+Text HLabel 4750 1950 0    60   BiDi ~ 0
+L5
+Text HLabel 6150 1950 2    60   BiDi ~ 0
+H5
+$Comp
+L Jumper_NO_Small JP2
+U 1 1 56CCCE6C
+P 2250 2150
+F 0 "JP2" H 2250 2230 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2260 2090 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 2250 2150 50  0001 C CNN
+F 3 "" H 2250 2150 50  0000 C CNN
+	1    2250 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 2250 2250 2350
+Wire Wire Line
+	2250 2350 2850 2350
+$Comp
+L Jumper_NO_Small JP3
+U 1 1 56CCD28E
+P 2250 3350
+F 0 "JP3" H 2250 3430 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2260 3290 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 2250 3350 50  0001 C CNN
+F 3 "" H 2250 3350 50  0000 C CNN
+	1    2250 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper_NO_Small JP4
+U 1 1 56CCD3F8
+P 2250 4550
+F 0 "JP4" H 2250 4630 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2260 4490 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 2250 4550 50  0001 C CNN
+F 3 "" H 2250 4550 50  0000 C CNN
+	1    2250 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper_NO_Small JP5
+U 1 1 56CCD451
+P 2250 5750
+F 0 "JP5" H 2250 5830 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2260 5690 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 2250 5750 50  0001 C CNN
+F 3 "" H 2250 5750 50  0000 C CNN
+	1    2250 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper_NO_Small JP6
+U 1 1 56CCD493
+P 5150 2150
+F 0 "JP6" H 5150 2230 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 5160 2090 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 5150 2150 50  0001 C CNN
+F 3 "" H 5150 2150 50  0000 C CNN
+	1    5150 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 3450 2250 3550
+Wire Wire Line
+	2250 3550 2850 3550
+Wire Wire Line
+	2250 4650 2250 4750
+Wire Wire Line
+	2250 4750 2850 4750
+Wire Wire Line
+	5150 2250 5150 2350
+Wire Wire Line
+	5150 2350 5750 2350
+Wire Wire Line
+	2250 5850 2250 5950
+Wire Wire Line
+	2250 5950 2850 5950
+$Comp
+L BSS138 Q6
+U 1 1 56D4B899
+P 5450 3050
+F 0 "Q6" H 5650 3125 50  0000 L CNN
+F 1 "BSS138" H 5650 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5650 2975 50  0000 L CIN
+F 3 "" H 5450 3050 50  0000 L CNN
+	1    5450 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R31
+U 1 1 56D4B89F
+P 5150 2900
+F 0 "R31" V 5230 2900 50  0000 C CNN
+F 1 "10K" V 5150 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 2900 50  0001 C CNN
+F 3 "" H 5150 2900 50  0000 C CNN
+	1    5150 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R32
+U 1 1 56D4B8A5
+P 5750 2900
+F 0 "R32" V 5830 2900 50  0000 C CNN
+F 1 "10K" V 5750 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5680 2900 50  0001 C CNN
+F 3 "" H 5750 2900 50  0000 C CNN
+	1    5750 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2650 5400 2850
+Wire Wire Line
+	4750 2650 5400 2650
+Wire Wire Line
+	5150 2650 5150 2750
+Wire Wire Line
+	5750 3050 5750 3550
+Wire Wire Line
+	5650 3150 6150 3150
+Wire Wire Line
+	4750 3150 5250 3150
+Wire Wire Line
+	5150 3050 5150 3250
+Connection ~ 5150 3150
+Connection ~ 5750 3150
+Connection ~ 5150 2650
+Text HLabel 6150 2650 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	5750 2750 5750 2650
+Wire Wire Line
+	5750 2650 6150 2650
+Text HLabel 4750 2650 0    60   Input ~ 0
+LVCC
+Text HLabel 4750 3150 0    60   BiDi ~ 0
+L6
+Text HLabel 6150 3150 2    60   BiDi ~ 0
+H6
+$Comp
+L Jumper_NO_Small JP7
+U 1 1 56D4B8BB
+P 5150 3350
+F 0 "JP7" H 5150 3430 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 5160 3290 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 5150 3350 50  0001 C CNN
+F 3 "" H 5150 3350 50  0000 C CNN
+	1    5150 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3450 5150 3550
+Wire Wire Line
+	5150 3550 5750 3550
+$Comp
+L BSS138 Q7
+U 1 1 56D4B95B
+P 5450 4250
+F 0 "Q7" H 5650 4325 50  0000 L CNN
+F 1 "BSS138" H 5650 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5650 4175 50  0000 L CIN
+F 3 "" H 5450 4250 50  0000 L CNN
+	1    5450 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R33
+U 1 1 56D4B961
+P 5150 4100
+F 0 "R33" V 5230 4100 50  0000 C CNN
+F 1 "10K" V 5150 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 4100 50  0001 C CNN
+F 3 "" H 5150 4100 50  0000 C CNN
+	1    5150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R34
+U 1 1 56D4B967
+P 5750 4100
+F 0 "R34" V 5830 4100 50  0000 C CNN
+F 1 "10K" V 5750 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5680 4100 50  0001 C CNN
+F 3 "" H 5750 4100 50  0000 C CNN
+	1    5750 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3850 5400 4050
+Wire Wire Line
+	4750 3850 5400 3850
+Wire Wire Line
+	5150 3850 5150 3950
+Wire Wire Line
+	5750 4250 5750 4750
+Wire Wire Line
+	5650 4350 6150 4350
+Wire Wire Line
+	4750 4350 5250 4350
+Wire Wire Line
+	5150 4250 5150 4450
+Connection ~ 5150 4350
+Connection ~ 5750 4350
+Connection ~ 5150 3850
+Text HLabel 6150 3850 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	5750 3950 5750 3850
+Wire Wire Line
+	5750 3850 6150 3850
+Text HLabel 4750 3850 0    60   Input ~ 0
+LVCC
+Text HLabel 6150 4350 2    60   BiDi ~ 0
+H7
+$Comp
+L Jumper_NO_Small JP8
+U 1 1 56D4B97D
+P 5150 4550
+F 0 "JP8" H 5150 4630 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 5160 4490 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 5150 4550 50  0001 C CNN
+F 3 "" H 5150 4550 50  0000 C CNN
+	1    5150 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 4650 5150 4750
+Wire Wire Line
+	5150 4750 5750 4750
+$Comp
+L BSS138 Q8
+U 1 1 56D4BA01
+P 5450 5450
+F 0 "Q8" H 5650 5525 50  0000 L CNN
+F 1 "BSS138" H 5650 5450 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5650 5375 50  0000 L CIN
+F 3 "" H 5450 5450 50  0000 L CNN
+	1    5450 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L R R35
+U 1 1 56D4BA07
+P 5150 5300
+F 0 "R35" V 5230 5300 50  0000 C CNN
+F 1 "10K" V 5150 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 5300 50  0001 C CNN
+F 3 "" H 5150 5300 50  0000 C CNN
+	1    5150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R36
+U 1 1 56D4BA0D
+P 5750 5300
+F 0 "R36" V 5830 5300 50  0000 C CNN
+F 1 "10K" V 5750 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5680 5300 50  0001 C CNN
+F 3 "" H 5750 5300 50  0000 C CNN
+	1    5750 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5050 5400 5250
+Wire Wire Line
+	4750 5050 5400 5050
+Wire Wire Line
+	5150 5050 5150 5150
+Wire Wire Line
+	5750 5450 5750 5950
+Wire Wire Line
+	5650 5550 6150 5550
+Wire Wire Line
+	4750 5550 5250 5550
+Wire Wire Line
+	5150 5450 5150 5650
+Connection ~ 5150 5550
+Connection ~ 5750 5550
+Connection ~ 5150 5050
+Text HLabel 6150 5050 2    60   Input ~ 0
+HVCC
+Wire Wire Line
+	5750 5150 5750 5050
+Wire Wire Line
+	5750 5050 6150 5050
+Text HLabel 4750 5050 0    60   Input ~ 0
+LVCC
+Text HLabel 4750 5550 0    60   BiDi ~ 0
+L8
+Text HLabel 6150 5550 2    60   BiDi ~ 0
+H8
+$Comp
+L Jumper_NO_Small JP9
+U 1 1 56D4BA23
+P 5150 5750
+F 0 "JP9" H 5150 5830 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 5160 5690 50  0001 C CNN
+F 2 "myfootprint:Jumper" H 5150 5750 50  0001 C CNN
+F 3 "" H 5150 5750 50  0000 C CNN
+	1    5150 5750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 5850 5150 5950
+Wire Wire Line
+	5150 5950 5750 5950
+Text HLabel 4750 4350 0    60   BiDi ~ 0
+L7
+$EndSCHEMATC
