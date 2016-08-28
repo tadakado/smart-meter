@@ -1,5 +1,7 @@
 # Smart meter board by ADE7816
 
+![image.png](https://raw.githubusercontent.com/tadakado/smart-meter/master/smartmeter.jpg)
+
 ## Description (in Japanese)
 アナログデバイスのADE7816を用いた電力計のプロトタイプで、最大6チャンネルの測定ができます。
 ここには、回路図、基板デザイン、テスト用のプログラムコードが含まれます。
